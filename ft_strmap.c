@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 17:23:35 by vnxele            #+#    #+#             */
-/*   Updated: 2017/06/10 02:55:00 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/02 18:50:36 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ char	*ft_strmap(char const *s, char (*f) (char))
 
 	if (!s || !f)
 		return (NULL);
-	new = ft_strnew(ft_strlen(s));
-	if (new == 0)
-		return (0);
+	if (!(new = ft_strnew(ft_strlen(s))))
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

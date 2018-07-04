@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 19:18:50 by vnxele            #+#    #+#             */
-/*   Updated: 2017/06/11 14:32:49 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/04 12:07:32 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	i = 0;
-	b = (char *)malloc(len + 1);
-	if (b == 0)
+	if (!(b = (char *)malloc(len + 1)))
 		return (0);
 	while (i < len)
 	{

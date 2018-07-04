@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 00:01:58 by vnxele            #+#    #+#             */
-/*   Updated: 2017/06/10 02:34:46 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/02 21:27:12 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*str;
 
-	str = (char *)malloc(size + 1);
-	if (str == NULL)
+	if (!(str = (char *)malloc(size + 1)))
 		return (NULL);
 	ft_bzero(str, size);
 	str[size] = '\0';

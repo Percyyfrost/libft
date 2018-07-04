@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/11 10:14:52 by vnxele            #+#    #+#             */
-/*   Updated: 2017/09/21 17:05:29 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/04 11:39:48 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char			**ft_strsplit(char const *s, char c)
 	i = 0;
 	size = 0;
 	while (s[i])
-	{
 		if (s[i] == c)
 			i++;
 		else
@@ -57,7 +56,6 @@ char			**ft_strsplit(char const *s, char c)
 				i++;
 			tab[size++] = ft_strsub(s, start, i - start);
 		}
-	}
 	tab[size] = NULL;
 	return (tab);
 }

@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/10 02:42:22 by vnxele            #+#    #+#             */
-/*   Updated: 2017/06/10 03:15:51 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/02 19:15:40 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	new = ft_strnew(ft_strlen(s));
-	if (new == 0)
-		return (0);
+	if (!(new = ft_strnew(ft_strlen(s))))
+		return (NULL);
 	k = 0;
 	while (s[k])
 	{
