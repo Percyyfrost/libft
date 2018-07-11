@@ -6,7 +6,11 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/11 09:36:04 by vnxele            #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2018/07/09 11:41:47 by vuyaninxe        ###   ########.fr       */
+=======
 /*   Updated: 2018/07/04 12:46:57 by vuyaninxe        ###   ########.fr       */
+>>>>>>> da39addc2c7a84bd999e3249019c8339fb6e60ea
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +31,7 @@ char		*ft_itoa(int n)
 	}
 	if (!(str = ft_strnew(len)))
 		return (NULL);
-	str[--len] = cpy % 10 + '0';
+		str[--len] = cpy % 10 + '0';
 	while (cpy /= 10)
 		str[--len] = cpy % 10 + '0';
 	if (n < 0)
