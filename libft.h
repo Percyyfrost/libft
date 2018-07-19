@@ -6,7 +6,7 @@
 /*   By: vnxele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/04 15:49:01 by vnxele            #+#    #+#             */
-/*   Updated: 2017/09/02 13:48:33 by vnxele           ###   ########.fr       */
+/*   Updated: 2018/07/19 06:08:22 by vuyaninxe        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct		s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct s_list	*next;
+}			t_list;
 
 size_t		ft_strlen(const char *str);
 char		*ft_strcpy(char *dest, const char *src);
@@ -74,5 +81,11 @@ void		ft_putstr_fd(char const *s, int fd);
 void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 size_t		ft_dstrlen(int n);
+t_list		*ft_lstnew(void const *content, size_t content_size);
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
 
 #endif
